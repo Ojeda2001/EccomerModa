@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import path from "path";
-import cors from 'cors';
+// import cors from 'cors';
 
 import authRoutes from "./routes/auth.route.js";
 import productRoutes from "./routes/product.route.js";
@@ -12,7 +12,7 @@ import paymentRoutes from "./routes/payment.route.js";
 import analyticsRoutes from "./routes/analytics.route.js";
 
 import { connectDB } from "./lib/db.js";
-import {generateSampleData} from "./generalData.js"
+// import {generateSampleData} from "./generalData.js"
 dotenv.config();
 
 const app = express();

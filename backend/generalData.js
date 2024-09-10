@@ -1,21 +1,8 @@
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
 import User from './models/user.model.js';  // Asegúrate de que las rutas sean correctas
 import Product from './models/product.model.js';
 import Coupon from './models/coupon.model.js';
 import Order from './models/order.model.js';
-import bcrypt from 'bcryptjs';
 
-// Configurar dotenv para cargar las variables de entorno
-dotenv.config();
-
-const mongoURI = process.env.MONGODB_URI || 'your_mongodb_uri_here';
-
-/*  Conectar a MongoDB
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Connected to MongoDB'))
-  .catch(err => console.error('Error connecting to MongoDB', err));
-*/
 
 export const generateSampleData = async () => {
   try {
@@ -137,5 +124,3 @@ export const generateSampleData = async () => {
     console.error('Error generating sample data:', error);
   }
 };
-
-
