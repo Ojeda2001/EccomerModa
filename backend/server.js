@@ -18,11 +18,11 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 7080;
 
-app.use(cors({
+/* app.use(cors({
 	origin: 'http://localhost:5173', // Cambia esto por la URL de tu frontend en producción
 	methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
 	credentials: true, // Si estás utilizando cookies o autenticación basada en sesiones
-  }));
+  }));*/
 
 const __dirname = path.resolve();
 
