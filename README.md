@@ -1,5 +1,11 @@
 <h1 align="center">E-Commerce Store 🛒</h1>
 
+In case of memory error, precompile the frontend component, and commit the changes.
+Code for compile the frontend component in the server.
+´´´
+"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+´´´
+
 ![Demo App](/frontend/public/screenshot-for-readme.png)
 
 [Video Tutorial on Youtube](https://youtu.be/sX57TLIPNx8)

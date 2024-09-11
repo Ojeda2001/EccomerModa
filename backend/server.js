@@ -18,11 +18,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 7080;
 
-/* app.use(cors({
-	origin: 'http://localhost:5173', // Cambia esto por la URL de tu frontend en producción
-	methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
-	credentials: true, // Si estás utilizando cookies o autenticación basada en sesiones
-  }));*/
+
 
 const __dirname = path.resolve();
 
@@ -40,6 +36,13 @@ app.use("/api/payments", paymentRoutes);
 app.use("/api/analytics", analyticsRoutes);
 
 if (process.env.NODE_ENV === "production") {
+
+	/* app.use(cors({
+		origin: 'http://localhost:5173', // Cambia esto por la URL de tu frontend en producción
+		methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
+		credentials: true, // Si estás utilizando cookies o autenticación basada en sesiones
+	}));*/
+
 	app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
 	app.get("*", (req, res) => {
